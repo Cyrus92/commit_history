@@ -4,8 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 export default class ProjectSwitcher extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            owner: "cyrus92"
+        };    
+        this.handleChangeOwner = this.handleChangeOwner.bind(this);
+    }
 
-    
+    handleChangeOwner(e) {
+        this.setState({owner: ""})
+        this.setState({totalCommits: ""})
+        this.setState({commits: ""})
+    }
+
     render() {
         return (
             <div className="row" >
@@ -17,7 +29,7 @@ export default class ProjectSwitcher extends React.Component {
                         type="text"
                         placeholder="Enter owner name"
                         className="form-control"
-                        onChange={() => {}}
+                        onChange={this.handleChangeOwner}
                         required
                     />
                 </div>
