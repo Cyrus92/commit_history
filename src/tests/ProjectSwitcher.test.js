@@ -6,4 +6,11 @@ describe("ProjectSwitcher", () => {
     const wrapper = shallow(<ProjectSwitcher />);
   });
 
+  it("should render initial layout", () => {
+    // when
+    const component = shallow(<ProjectSwitcher />);
+    // then
+    expect(component.getElements()).toMatchSnapshot();
+  });
+
 });

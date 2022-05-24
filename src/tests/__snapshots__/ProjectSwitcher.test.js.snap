@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectSwitcher should render initial layout 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-5"
+    >
+      <label
+        className="float-left"
+      >
+        Owner
+      </label>
+      <input
+        className="form-control"
+        id="owner"
+        onChange={[Function]}
+        placeholder="Enter owner name"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="col-md-7"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-md-8"
+        >
+          <label
+            className="float-left"
+          >
+            Repo
+          </label>
+          <br />
+          <input
+            className="form-control"
+            id="repo"
+            onChange={[Function]}
+            placeholder="Enter repo name"
+            required={true}
+            type="text"
+          />
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <br />
+          <Button
+            active={false}
+            disabled={false}
+            variant="primary"
+          >
+            Show commits
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
