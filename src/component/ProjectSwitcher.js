@@ -13,7 +13,7 @@ export default class ProjectSwitcher extends React.Component {
     }
 
     handleChangeOwner(e) {
-        this.setState({owner: ""})
+        this.setState({owner: e.target.value})
         this.setState({totalCommits: ""})
         this.setState({commits: ""})
     }
