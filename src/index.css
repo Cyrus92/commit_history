@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.app_title{
+  padding: 80px 0px 40px;
+}
+.text-left{
+  text-align: left
+}
+.float-left{
+  float: left
+}
