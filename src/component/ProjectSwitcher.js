@@ -14,6 +14,8 @@ export default class ProjectSwitcher extends React.Component {
         this.handleChangeOwner = this.handleChangeOwner.bind(this);
         // bind Change Repo event
         this.handleChangeRepo = this.handleChangeRepo.bind(this);
+        // bind Change fetchCommits event
+        this.fetchCommits = this.fetchCommits.bind(this);
     }
 
     // Change Owner event
@@ -26,6 +28,12 @@ export default class ProjectSwitcher extends React.Component {
     // Change Repo event
     handleChangeRepo(e) {
         this.setState({repo: e.target.value})
+        this.setState({totalCommits: ""})
+        this.setState({commits: ""})
+    }
+
+    // Fetch commits
+    fetchCommits() {
         this.setState({totalCommits: ""})
         this.setState({commits: ""})
     }

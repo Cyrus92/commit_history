@@ -71,7 +71,16 @@ describe("ProjectSwitcher component", () => {
         expect(component.state('repo')).toEqual('newValue');
     });
 
-
+    it("should create totalCommits and commits states after calling fetchCommits function", () => {
+        // given
+        const component = shallow(<ProjectSwitcher />);
+        const instance = component.instance();
+        // when
+        instance.fetchCommits();
+        // then        
+        expect(component.state('totalCommits')).toBeDefined();
+        expect(component.state('commits')).toBeDefined();
+    });
   
 
 });
