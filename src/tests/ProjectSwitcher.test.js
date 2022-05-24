@@ -57,6 +57,20 @@ describe("ProjectSwitcher component", () => {
         expect(component.state('commits')).toBeDefined();
     });
 
+    
+    it("should create repo state with the event value", () => {
+        // given
+        const component = shallow(<ProjectSwitcher />);
+        const form = component.find('#repo');
+        // when
+        form.props().onChange({target: {
+        name: 'myName',
+        value: 'newValue'
+        }});
+        // then
+        expect(component.state('repo')).toEqual('newValue');
+    });
+
 
   
 

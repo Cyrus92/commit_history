@@ -25,7 +25,7 @@ export default class ProjectSwitcher extends React.Component {
 
     // Change Repo event
     handleChangeRepo(e) {
-        this.setState({repo: ""})
+        this.setState({repo: e.target.value})
         this.setState({totalCommits: ""})
         this.setState({commits: ""})
     }
