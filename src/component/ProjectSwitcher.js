@@ -1,7 +1,5 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
 import { Octokit } from "@octokit/rest"
 
 const apiContext = "https://api.github.com";

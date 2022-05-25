@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import CommitsPage from './views/CommitsPage';
-import CommitRow from './component/CommitRow';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 function App() {
   return (

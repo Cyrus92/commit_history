@@ -20,8 +20,6 @@ describe("CommitsPage component", () => {
         const ProjectSwitcherComponent = component.find('ProjectSwitcher');
         const instance = ProjectSwitcherComponent.instance();
         // when
-        instance.fetchCommits("vinitshahdeo", "Library-Management-System");
-        // when
         ProjectSwitcherComponent.props().setCommitsData("data");
         // then
         expect(component.state('commitsData')).toEqual('data');

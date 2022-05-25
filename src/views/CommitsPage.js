@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectSwitcher from '../component/ProjectSwitcher';
+import CommitList from '../component/CommitList';
 
 export default class CommitsPage extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ setCommitsData(data) {
           <ProjectSwitcher  setCommitsData={this.setCommitsData} />
           
           {/* CommitList component */}
-          <div  />
+          <CommitList commitsData={this.state.commitsData}    />
       </div>
     )
   }

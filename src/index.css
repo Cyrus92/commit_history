@@ -22,3 +22,25 @@ code {
 .float-left{
   float: left
 }
+.commitItem{
+  border: 1px solid #d8dee4;
+  padding: 5px;
+}
+.commitItemImage{
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.commitItemLink {
+  padding: 5px 0px;
+}
+.commitItemLink a{
+  color:#333 ;
+  text-decoration: none;
+}
+.commitItemLink a:hover{
+  color:#0d6efd ;
+}
+.commitItemAuthor{
+  
+}

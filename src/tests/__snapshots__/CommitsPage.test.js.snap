@@ -6,7 +6,9 @@ Array [
     <ProjectSwitcher
       setCommitsData={[Function]}
     />
-    <div />
+    <CommitList
+      commitsData=""
+    />
   </div>,
 ]
 `;

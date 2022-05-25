@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import CommitList from '../component/CommitList';
+import CommitsPage from '../views/CommitsPage';
 describe("CommitList component", () => {
 
     it("should render", () => {
@@ -13,5 +14,7 @@ describe("CommitList component", () => {
         // then
         expect(component.getElements()).toMatchSnapshot();
     });
+
+    
 
 });
