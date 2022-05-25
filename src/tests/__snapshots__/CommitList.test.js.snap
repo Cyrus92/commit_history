@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommitList component should render initial layout 1`] = `
+Array [
+  <div>
+    <div />
+    <div />
+  </div>,
+]
+`;
