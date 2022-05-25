@@ -62,7 +62,9 @@ export default class ProjectSwitcher extends React.Component {
             // set totalCommits 
             this.setState({totalCommits: data.length}) 
             // set commits 
-            this.setState({commits: data})
+            this.setState({commits: data}) 
+            // set commits data
+            this.props.setCommitsData(data)
             // set disableShowCommitsBtn 
             if (this.state.totalCommits > 0) {
                 this.setState({disableShowCommitsBtn: false})
