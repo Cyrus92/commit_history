@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Step 2 : Create a gitHub personnal access token
 
-1. Navigate to githib.com
+1. Navigate to github.com
 2. If it is not, verify your email address here https://docs.github.com/en/github/getting-started-with-github/verifying-your-email-address 
 3. In the upper-right corner of any page, click your profile photo, then click Settings.
 4. In the left sidebar, click  Developer settings.
