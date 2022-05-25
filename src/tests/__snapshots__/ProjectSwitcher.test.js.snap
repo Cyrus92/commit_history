@@ -20,7 +20,7 @@ Array [
         placeholder="Enter owner name"
         required={true}
         type="text"
-        value="vinitshahdeo"
+        value="cyrus92"
       />
     </div>
     <div
@@ -45,7 +45,7 @@ Array [
             placeholder="Enter repo name"
             required={true}
             type="text"
-            value="Library-Management-System"
+            value="commit_history"
           />
         </div>
         <div
@@ -56,6 +56,7 @@ Array [
             active={false}
             disabled={true}
             id="showCommitsBtn"
+            onClick={[Function]}
             variant="primary"
           >
             Show 

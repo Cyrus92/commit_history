@@ -3,8 +3,13 @@
 exports[`CommitList component should render initial layout 1`] = `
 Array [
   <div>
-    <div />
-    <div />
+    <br />
+    <br />
+    No available data
+    <br />
+    
+    <br />
+    <br />
   </div>,
 ]
 `;

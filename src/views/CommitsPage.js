@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectSwitcher from '../component/ProjectSwitcher';
-import CommitList from '../component/CommitList';
+import CommitList from '../component/CommitList.js';
 
 export default class CommitsPage extends React.Component {
   constructor(props) {

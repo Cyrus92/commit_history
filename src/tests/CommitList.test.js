@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import CommitList from '../component/CommitList';
-import CommitsPage from '../views/CommitsPage';
+import CommitList from '../component/CommitList.js';
+import CommitsPage from '../views/CommitsPage.js';
 describe("CommitList component", () => {
 
     it("should render", () => {

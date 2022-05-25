@@ -9,15 +9,15 @@ export default class ProjectSwitcher extends React.Component {
         super(props);
         // Set initial states
         this.state = {
-            owner:"vinitshahdeo",// "cyrus92",
-            repo: "Library-Management-System", //commit_history",
+            owner:"cyrus92",// "vinitshahdeo",
+            repo: "commit_history", //Library-Management-System",
             totalCommits: 0,
             commits: "",
             page: 1,
             isLoading: true,
             disableShowCommitsBtn: true
         };    
-        // bind Change Owner event
+        // bind Change Owner event  
         this.handleChangeOwner = this.handleChangeOwner.bind(this);
         // bind Change Repo event
         this.handleChangeRepo = this.handleChangeRepo.bind(this);
@@ -25,7 +25,10 @@ export default class ProjectSwitcher extends React.Component {
         this.fetchCommits = this.fetchCommits.bind(this);
         // bind  fetchCommitsProcessing 
         this.fetchCommitsProcessing = this.fetchCommitsProcessing.bind(this);
-        
+        // bind  fetchCommitsErrorProcessing 
+        this.fetchCommitsErrorProcessing = this.fetchCommitsErrorProcessing.bind(this);
+        // bind  handleShowCommitsBtn 
+        this.handleShowCommitsBtn = this.handleShowCommitsBtn.bind(this);
     }
 
     componentDidMount() {
@@ -50,6 +53,13 @@ export default class ProjectSwitcher extends React.Component {
         // send Fetch commits request
         this.fetchCommits(this.state.owner, e.target.value)
     }
+
+    // Click on ShowCommitsBtn event 
+    handleShowCommitsBtn() {
+        // set commits data
+        this.props.setCommitsData(this.state.commits) 
+        
+    }
     
     // Process Fetch commits data
     fetchCommitsProcessing(response) {
@@ -60,8 +70,6 @@ export default class ProjectSwitcher extends React.Component {
             this.setState({totalCommits: data.length}) 
             // set commits 
             this.setState({commits: data}) 
-            // set commits data
-            this.props.setCommitsData(data)
             // set disableShowCommitsBtn 
             if (this.state.totalCommits > 0) {
                 this.setState({disableShowCommitsBtn: false})
@@ -78,32 +86,43 @@ export default class ProjectSwitcher extends React.Component {
         }
     }
 
+    // Process Fetch commits error
+    fetchCommitsErrorProcessing(err) {
+        // reset states 
+        this.setState(
+            {
+                totalCommits: 0,
+                commits: "",
+                disableShowCommitsBtn: true
+            }
+        ) 
+        // set commits data
+        this.props.setCommitsData("") 
+        
+    }
+
     // Fetch commits
     async fetchCommits(owner="", repo="") {
+        try {
+            const octokit = new Octokit({
+                auth: process.env.REACT_APP_GITHUB_TOKEN
+            })
+                    
+            // Request to server ends  
+            await octokit.request(
+                'GET /repos/{owner}/{repo}/commits', {
+                    owner: owner,
+                    repo: repo
+            })
+            // processing
+            .then(response => this.fetchCommitsProcessing(response) )
+            .catch( err => this.fetchCommitsErrorProcessing(err)
+            );
+          } catch(error) {
+            console.log(error);
+          }
         
-        const octokit = new Octokit({
-            auth: process.env.REACT_APP_GITHUB_TOKEN
-        })
         
-          
-        // Request to server ends  
-        await octokit.request(
-            'GET /repos/{owner}/{repo}/commits', {
-                owner: owner,
-                repo: repo
-        })
-        // processing
-        .then(response => this.fetchCommitsProcessing(response) )
-        .catch( err => 
-            // reset states 
-            this.setState(
-                {
-                    totalCommits: 0,
-                    commits: "",
-                    disableShowCommitsBtn: true
-                }
-            )  
-        );
     } 
     
 
@@ -143,7 +162,7 @@ export default class ProjectSwitcher extends React.Component {
                         {/* Button to start updating commitsList */}
                         <div className="col-md-4" >
                             <br/>
-                            <Button disabled={this.state.disableShowCommitsBtn} id="showCommitsBtn" variant="primary" >Show {this.state.totalCommits>0?this.state.totalCommits:""} commits</Button>
+                            <Button onClick={this.handleShowCommitsBtn} disabled={this.state.disableShowCommitsBtn} id="showCommitsBtn" variant="primary" >Show {this.state.totalCommits>0?this.state.totalCommits:""} commits</Button>
                         </div>
                     </div>
                     

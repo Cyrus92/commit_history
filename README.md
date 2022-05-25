@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# About
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Install and run 
 
-In the project directory, you can run:
+## Step 1 : Install NodeJS and Yarn 
 
-### `yarn start`
+1. Download and install NodeJS v16.13.1
+2. Run the command `npm install yarn` in your command line tool to install yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Step 2 : Create a gitHub personnal access token
 
-### `yarn test`
+1. Navigate to githib.com
+2. If it is not, verify your email address here https://docs.github.com/en/github/getting-started-with-github/verifying-your-email-address 
+3. In the upper-right corner of any page, click your profile photo, then click Settings.
+4. In the left sidebar, click  Developer settings.
+5. In the left sidebar, click Personal access tokens.
+6. Click Generate new token.
+7. Give your token a descriptive name.
+8. To give your token an expiration, select the Expiration drop-down menu, then click a default or use the calendar picker.
+9. Select the scopes, or permissions, you'd like to grant this token. To use your token to access repositories from the command line, select repo.
+10. Click Generate token.
+11. Done
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For additional information about creating a personal access token, please refer to this link : https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Step 3 : Set your GitHub personnal access token in project env to get higher access limits rate to GitHub API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open the .env file locateed at the root of the project
+2. Replace "PERSONAL_ACCESS_TOKEN" by your actual/generated token
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Step 4 : Test the project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To launch the test runner, move to the project directory and run the command `yarn test` 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Step 5 : Start the project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To start the application, move to the project directory and run the command `yarn start`
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

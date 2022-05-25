@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import ProjectSwitcher from '../component/ProjectSwitcher';
+import CommitsPage from '../views/CommitsPage';
 describe("ProjectSwitcher component", () => {
 
     it("should render", () => {
@@ -73,7 +74,8 @@ describe("ProjectSwitcher component", () => {
 
     it("should create totalCommits and commits states after calling fetchCommits function", () => {
         // given
-        const component = shallow(<ProjectSwitcher />);
+        const componentCommitsPage = shallow(<CommitsPage setCommitsData={() => {}} />);
+        const component = shallow(<ProjectSwitcher setCommitsData={componentCommitsPage.prop('setCommitsData')} />);
         const instance = component.instance();
         // when
         instance.fetchCommits("vinitshahdeo", "Library-Management-System");
