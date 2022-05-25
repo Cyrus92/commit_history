@@ -26,7 +26,7 @@ export default class CommitList extends React.Component {
             {/* LOAD MORE BUTTON */}
             {
                 (Array.isArray(this.props.commitsData) && this.props.commitsData.length)?
-                <Button id="loadMoreBtn" variant="primary" >More (+{this.props.commitsData.length }) </Button>
+                <Button id="loadMoreBtn" variant="primary" >More (...) </Button>
                 :""
             }
             <br /><br />
