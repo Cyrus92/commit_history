@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. Run the command `npm install yarn` in your command line tool to install yarn
 
 
-## Step 2 : Create a gitHub personnal access token
+## Step 2 : Create a personnal access token
 
 1. Navigate to github.com
 2. If it is not, verify your email address here https://docs.github.com/en/github/getting-started-with-github/verifying-your-email-address 
@@ -27,7 +27,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 For additional information about creating a personal access token, please refer to this link : https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
 
-## Step 3 : Set your GitHub personnal access token in project env to get higher access limits rate to GitHub API
+## Step 3 : Set your personnal access token in project env to get higher access limits rate to GitHub API
 
 1. Open the .env file located at the root of the project
 2. Replace "PERSONAL_ACCESS_TOKEN" by your actual/generated token
