@@ -27,7 +27,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 For additional information about creating a personal access token, please refer to this link : https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
 
-## Step 3 : Set your personnal access token in project env to get higher access limits rate to GitHub API
+## Step 3 : Set your personnal access token in project env
 
 1. Open the .env file located at the root of the project
 2. Replace "PERSONAL_ACCESS_TOKEN" by your actual/generated token
