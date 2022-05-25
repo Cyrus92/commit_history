@@ -20,6 +20,7 @@ Array [
         placeholder="Enter owner name"
         required={true}
         type="text"
+        value="cyrus92"
       />
     </div>
     <div
@@ -44,6 +45,7 @@ Array [
             placeholder="Enter repo name"
             required={true}
             type="text"
+            value="commit_history"
           />
         </div>
         <div
@@ -52,10 +54,13 @@ Array [
           <br />
           <Button
             active={false}
-            disabled={false}
+            disabled={true}
+            id="showCommitsBtn"
             variant="primary"
           >
-            Show commits
+            Show 
+            
+             commits
           </Button>
         </div>
       </div>

@@ -81,6 +81,8 @@ describe("ProjectSwitcher component", () => {
         expect(component.state('totalCommits')).toBeDefined();
         expect(component.state('commits')).toBeDefined();
     });
-  
+
+    
+    
 
 });
