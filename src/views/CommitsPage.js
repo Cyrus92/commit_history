@@ -14,6 +14,11 @@ export default class CommitsPage extends React.Component {
     
 }
 
+componentDidMount() {
+  
+  
+}
+
 // set CommitsData  state
 setCommitsData(data) {
   this.setState({commitsData: data})

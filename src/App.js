@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import CommitsPage from './views/CommitsPage';
+import CommitRow from './component/CommitRow';
 
 function App() {
   return (

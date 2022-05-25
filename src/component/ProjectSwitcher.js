@@ -52,7 +52,6 @@ export default class ProjectSwitcher extends React.Component {
         // send Fetch commits request
         this.fetchCommits(this.state.owner, e.target.value)
     }
-
     
     // Process Fetch commits data
     fetchCommitsProcessing(response) {
