@@ -3,7 +3,9 @@
 exports[`CommitsPage component should render initial layout 1`] = `
 Array [
   <div>
-    <ProjectSwitcher />
+    <ProjectSwitcher
+      setCommitsData={[Function]}
+    />
     <div />
   </div>,
 ]

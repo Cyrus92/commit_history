@@ -76,7 +76,7 @@ describe("ProjectSwitcher component", () => {
         const component = shallow(<ProjectSwitcher />);
         const instance = component.instance();
         // when
-        instance.fetchCommits();
+        instance.fetchCommits("vinitshahdeo", "Library-Management-System");
         // then        
         expect(component.state('totalCommits')).toBeDefined();
         expect(component.state('commits')).toBeDefined();

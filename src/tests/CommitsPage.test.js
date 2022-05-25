@@ -13,6 +13,19 @@ describe("CommitsPage component", () => {
         // then
         expect(component.getElements()).toMatchSnapshot();
     });
+
+    it("should update commitsData to match commits in ProjectSwitcher after calling setCommitsData in ProjectSwitcher" , () => {
+        // given
+        const component = mount(<CommitsPage />);
+        const ProjectSwitcherComponent = component.find('ProjectSwitcher');
+        const instance = ProjectSwitcherComponent.instance();
+        // when
+        instance.fetchCommits("vinitshahdeo", "Library-Management-System");
+        // when
+        ProjectSwitcherComponent.props().setCommitsData("data");
+        // then
+        expect(component.state('commitsData')).toEqual('data');
+    });
     
     
 
