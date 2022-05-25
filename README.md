@@ -29,7 +29,7 @@ For additional information about creating a personal access token, please refer 
 
 ## Step 3 : Set your GitHub personnal access token in project env to get higher access limits rate to GitHub API
 
-1. Open the .env file locateed at the root of the project
+1. Open the .env file located at the root of the project
 2. Replace "PERSONAL_ACCESS_TOKEN" by your actual/generated token
 
 
