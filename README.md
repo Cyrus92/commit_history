@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Step 1 : Install NodeJS and Yarn 
 
-1. Download and install NodeJS v16.13.1
+1. Download and install NodeJS v16.13.1 (https://nodejs.org/ru/blog/release/v16.13.1/)
 2. Run the command `npm install yarn` in your command line tool to install yarn
 
 
