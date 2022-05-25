@@ -7,4 +7,11 @@ describe("CommitRow component", () => {
         const wrapper = shallow(<CommitRow />);
     });
 
+    it("should render initial layout", () => {
+        // when
+        const component = shallow(<CommitRow />);
+        // then
+        expect(component.getElements()).toMatchSnapshot();
+    });
+
 });
