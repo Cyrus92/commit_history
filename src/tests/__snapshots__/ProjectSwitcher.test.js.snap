@@ -20,7 +20,7 @@ Array [
         placeholder="Enter owner name"
         required={true}
         type="text"
-        value="cyrus92"
+        value="vinitshahdeo"
       />
     </div>
     <div
@@ -45,7 +45,7 @@ Array [
             placeholder="Enter repo name"
             required={true}
             type="text"
-            value="commit_history"
+            value="Library-Management-System"
           />
         </div>
         <div
