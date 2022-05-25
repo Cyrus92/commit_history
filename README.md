@@ -33,12 +33,17 @@ For additional information about creating a personal access token, please refer 
 2. Replace "PERSONAL_ACCESS_TOKEN" by your actual/generated token
 
 
-## Step 4 : Test the project
+## Step 4 : Install dependencies
 
-To launch the test runner, move to the project directory and run the command `yarn test` 
+To install all dependencies, move to the project directory and run the command `yarn install`
 
 
-## Step 5 : Start the project
+## Step 5 : Test the project
+
+To launch the test runner, move to the project directory and run the command `yarn test a` 
+
+
+## Step 6 : Start the project
 
 To start the application, move to the project directory and run the command `yarn start`
 
